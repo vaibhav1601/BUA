@@ -5,4 +5,64 @@
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="view_width">1dp</dimen>
+    <dimen name="text_size">15sp</dimen>
+    <dimen name="label_text_size">17sp</dimen>
+    <dimen name="label_padding">5dp</dimen>
+    <dimen name="current_temperature_text">60sp</dimen>
+
+    <dimen name="star_img_margin">10dp</dimen>
+    <dimen name="top_margin">120dp</dimen>
+
+    <dimen name="searchItem">20dp</dimen>
+
+    <dimen name="singleRowHeight">63dp</dimen>
+    <dimen name="layOutHeight">50dp</dimen>
+
+    <dimen name="heightEighty">70dp</dimen>
+    <dimen name="img_width">25dp</dimen>
+    <dimen name="img_height">70dp</dimen>
+    <dimen name="line_height">2dp</dimen>
+    <dimen name="img_padding">10dp</dimen>
+
+    <dimen name="stockImageHt">35dp</dimen>
+    <dimen name="addItemimg_width">20dp</dimen>
+    <dimen name="addItemimg_height">45dp</dimen>
+    <dimen name="topBarHeight">50dp</dimen>
+    60dp
+
+    <dimen name="lowTwo">2dp</dimen>
+    <dimen name="lowthree">3dp</dimen>
+    <dimen name="lowFive">5dp</dimen>
+    <dimen name="internal_padding">20dp</dimen>
+    <dimen name="headText">15dp</dimen>
+    <dimen name="lowTen">10dp</dimen>
+    <dimen name="layout_margine2">25dp</dimen>
+    <dimen name="lowFifteen">15dp</dimen>
+    <dimen name="lowTwenty">20dp</dimen>
+    <dimen name="lowThirty">30dp</dimen>
+    <dimen name="lowforty">40dp</dimen>
+    <dimen name="lowfortyfive">45dp</dimen>
+    <dimen name="lowsixty">60dp</dimen>
+
+
+    <!--10 20 30  4vali margine-->
+
+    <dimen name="normal_text_size">18sp</dimen>
+    <dimen name="max_text_size">25sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="margin_edttext">30dp</dimen>
+
+
+    <dimen name="detailsViewLayout">105dp</dimen>
+    <dimen name="cardTextView">18dp</dimen>
+    <dimen name="topBarLayout">50dp</dimen>
+
+    <dimen name="topMarginlayout">100dp</dimen>
+    <dimen name="topMarginlayoutSite">120dp</dimen>
+    <dimen name="addDetailsLayout">60dp</dimen>
+
+
 </resources>

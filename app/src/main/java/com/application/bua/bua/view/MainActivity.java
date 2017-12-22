@@ -15,6 +15,7 @@ import android.view.View;
 
 import com.application.bua.bua.R;
 import com.application.bua.bua.view.login.LoginActivity;
+import com.application.bua.bua.view.registrtaion.registration;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -80,9 +81,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                Login();
                 return true;
 
+             case R.id.registration:
+                Registration();
+                return true;
+
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }
+
+
+    }
+
+    private void Registration()
+    {
+
+        Intent intent= new Intent(MainActivity.this, registration.class);
+        startActivity(intent);
 
 
     }

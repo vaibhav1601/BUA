@@ -6,4 +6,10 @@
         android:orderInCategory="100"
         android:title="@string/Login"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/registration"
+        android:orderInCategory="100"
+        android:title="@string/Registration"
+        app:showAsAction="never" />
 </menu>
