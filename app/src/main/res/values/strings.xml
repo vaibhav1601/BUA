@@ -13,9 +13,7 @@
 
     <!--Registration-->
 
-    <String name="orgName">organisation name </String>
-    <String name="mobNum">mobile Number</String>
-    <string name="Registration">Registration</string>
+
 
 
     <!-- Strings related to login -->
