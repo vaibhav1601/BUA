@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+
+    flavorDimensions "default"
+    defaultConfig {
+        applicationId "com.application.bua.bua"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+
+    variantFilter { variant ->
+        def names = variant.flavors*.name
+        def buildType = variant.buildType*.name
+
+        // To check for a certain build type, use variant.buildType.name == "<buildType>"
+        if ((names.contains("prod") && buildType.contains("debug"))
+                || (names.contains("dev") && buildType.contains("release"))
+                || (names.contains("prodTesting") && buildType.contains("release"))) {
+            // Gradle ignores any variants that satisfy the conditions above.
+            setIgnore(true)
+        }
+    }
+
+    productFlavors {
+        dev {
+            buildConfigField "String", "BASE_URL", "\"http://www.tracebale.farmerp.com/\""
+            buildConfigField "String", "USER_NAME", "\"vaibhavk@gmail.com\""
+            buildConfigField "String", "PASSWORD", "\"Admin@123\""
+        }
+
+        prod {
+            buildConfigField "String", "BASE_URL", "\"http://www.tracebale.farmerp.com/\""
+            buildConfigField "String", "USER_NAME", "\"\""
+            buildConfigField "String", "PASSWORD", "\"\""
+        }
+        prodTesting {
+            buildConfigField "String", "BASE_URL", "\"http://192.168.0.130/FarmERPGrapes/WebServices/\""
+            buildConfigField "String", "USER_NAME", "\"vaibhavk@gmail.com\""
+            buildConfigField "String", "PASSWORD", "\"Admin@123\""
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton:butterknife:8.7.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.3.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.jakewharton:butterknife:8.7.0'
+    compile 'com.google.android.gms:play-services:10.0.1'
+    compile 'com.google.firebase:firebase-database:10.0.1'
+    compile 'com.google.firebase:firebase-auth:10.0.1'
+    compile 'com.google.firebase:firebase-core:10.0.1'
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
+
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.google.gms.google-services'
+
+
+
+apply plugin: 'com.google.gms.google-services'
